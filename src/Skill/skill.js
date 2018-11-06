@@ -64,11 +64,11 @@
   App.config(function ($routeProvider) {
     $routeProvider
       .when('/skill', {
-        templateUrl: 'view/Skill/skill-list.html',
+        templateUrl: 'src/Skill/skill-list.html',
         controller: 'skillListController'
       })
       .when('/skillDetail/:id', {
-        templateUrl: 'view/Skill/skill-detail.html',
+        templateUrl: 'src/Skill/skill-detail.html',
         controller: 'skillDetailController'
       });
   });

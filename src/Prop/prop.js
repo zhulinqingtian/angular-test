@@ -50,11 +50,11 @@
   app.config(function ($routeProvider) {
     $routeProvider
       .when('/prop', {
-        templateUrl: 'view/Prop/prop-list.html',
+        templateUrl: 'src/Prop/prop-list.html',
         controller: 'propController'
       })
       .when('/propDetail/:id', {
-        templateUrl: 'view/Prop/prop-detail.html',
+        templateUrl: 'src/Prop/prop-detail.html',
         controller: 'propDetailController'
       });
   });

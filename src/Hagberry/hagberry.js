@@ -31,11 +31,11 @@
   app.config(function ($routeProvider) {
     $routeProvider
       .when('/hagberry', {
-        templateUrl: 'view/hagberry/hagberry-list.html',
+        templateUrl: 'src/hagberry/hagberry-list.html',
         controller: 'hagberryController'
       })
       .when('/hagberry/:id', {
-        templateUrl: 'view/hagberry/hagberry-detail.html',
+        templateUrl: 'src/hagberry/hagberry-detail.html',
         controller: 'hagberryDetailController'
       })
   });

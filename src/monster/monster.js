@@ -57,15 +57,15 @@
   monsterApp.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'view/monster/monster-list.html',
+        templateUrl: 'src/monster/monster-list.html',
         controller: 'listController'
       })
       .when('/monster', {
-        templateUrl: 'view/monster/monster-list.html',
+        templateUrl: 'src/monster/monster-list.html',
         controller: 'listController'
       })
       .when('/detail/:id', {
-        templateUrl: 'view/monster/monster-detail.html',
+        templateUrl: 'src/monster/monster-detail.html',
         controller: 'detailController'
       })
       .otherwise({
