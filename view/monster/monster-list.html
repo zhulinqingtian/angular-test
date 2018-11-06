@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>口袋妖怪列表页</title>
+</head>
+<body ng-controller="listController">
+<!--
+AngularJS 路由 是通过 # + 标记 帮助我们区分不同的逻辑页面并将不同的页面绑定到对应的控制器上。因此在设置好路由规则后，为html页面的a标签设置href路由链接切换不同的视图。Angular1.6版本之前通常有href=“#...”或href=“#/...”这两种写法
+-->
+<table class="main-list-table">
+  <tr>
+    <th>名称</th>
+    <th>数量</th>
+    <th>重量</th>
+    <th>总计</th>
+    <th>操作</th>
+  </tr>
+  <tr ng-repeat="item in monsters">
+    <td>
+      <a href="#!/detail/{{item.id}}">{{item.name}}</a>
+    </td>
+    <td>
+      <input type="text" ng-model="item.count">
+    </td>
+    <td>{{item.weight}}</td>
+    <td>{{item.weight * item.count}}</td>
+    <td>
+      <button ng-click="remove($index)">删除</button>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

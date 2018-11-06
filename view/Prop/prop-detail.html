@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>道具详情页</title>
+</head>
+<body ng-controller="propDetailController">
+  <div class="detail-block">
+    <div class="left">
+      <img ng-src="{{propDetailItem.src}}" alt="">
+    </div>
+    <div class="right">
+      <p class="description">{{propDetailItem.description}}</p>
+    </div>
+    <a href="#!/prop">返回列表</a>
+  </div>
+</body>
+</html>

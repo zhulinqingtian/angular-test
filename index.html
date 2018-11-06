@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>口袋妖怪</title>
+  <script src="libs/angular.js"></script>
+  <script src="libs/angular-route.js"></script>
+  <script src="app.js"></script>
+
+  <!--引入模块-->
+  <script src="view/monster/monster.js"></script>
+  <script src="view/Skill/skill.js"></script>
+  <script src="view/Prop/prop.js"></script>
+  <script src="view/Hagberry/hagberry.js"></script>
+
+  <link rel="stylesheet" href="app.css">
+</head>
+<body ng-controller="AppController">
+  <div id="common-content-block">
+    <nav id="header">
+      <a href="#!/monster">口袋妖怪</a>
+      <a href="#!/skill">技能</a>
+      <a href="#!/prop">道具</a>
+      <a href="#!/hagberry">树果</a>
+      <a href="#!/game">游戏</a>
+    </nav>
+    <h1>口袋妖怪管理系统</h1>
+    <div ng-view></div>
+  </div>
+
+
+  <!--
+  - 首先将angular.js从刚才下载的包中复制黏贴工程中新建的libs文件夹下，并在html中引入
+  - 然后引入app.js作为主JS文件
+  - 在html标签中加入 ng-app="app" ,即html中都是'app'模块的管理区域
+  - 在body标签中加入 ng-controller="AppController" ，即body下都是'AppController'控制器的控制区域
+  - 完成每个模块的编写之后，记得将模块引入工程 (index.html), 并添加模块的依赖
+  -->
+</body>
+</html>

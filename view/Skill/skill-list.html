@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>技能列表页</title>
+</head>
+<body ng-controller="skillListController">
+<table class="main-list-table">
+  <tr>
+    <th>名称</th>
+    <th>类型</th>
+    <th>属性</th>
+    <th>威力</th>
+  </tr>
+  <tr ng-repeat="item in skillList">
+    <td>
+      <a href="#!/skillDetail/{{item.id}}">{{item.name}}</a>
+    </td>
+    <td>{{item.type}}</td>
+    <td>{{item.prop}}</td>
+    <td>
+      <input type="text" ng-model="item.power">
+    </td>
+    <td>
+      <button ng-click="remove($index)">删除</button>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

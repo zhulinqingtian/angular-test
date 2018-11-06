@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>树果列表页</title>
+</head>
+<body ng-controller="hagberryController">
+<table class="main-list-table">
+  <tr>
+    <th>图标</th>
+    <th>名称</th>
+    <th>道具说明</th>
+  </tr>
+  <tr ng-repeat="item in hagberryList">
+    <td>
+      <img ng-src="{{item.src}}" alt="">
+    </td>
+    <td>
+      <a href="#!/hagberry/{{item.id}}">{{item.name}}</a>
+    </td>
+    <td>{{item.description}}</td>
+    <td>
+      <button ng-click="remove($index)">删除</button>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

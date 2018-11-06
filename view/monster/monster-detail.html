@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>口袋妖怪详情页</title>
+</head>
+<body ng-controller="detailController">
+  <div class="detail-block">
+    <div class="left">
+      <img ng-src="{{monster.img}}">
+    </div>
+    <div class="right">
+      <p>编号: {{monster.id}}</p>
+      <p>名称: {{monster.name}}</p>
+      <p>体重: {{monster.weight}}</p>
+      <p>属性: {{monster.property}}</p>
+      <p>种类: {{monster.type}}</p>
+      <div class="more-detail">
+        <ul>
+          <li>特性: </li>
+          <li>普通特性: {{monster.character.common}}</li>
+          <li>隐藏特性: {{monster.character.conceal}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-block">
+      <div ng-show="monster.forms" class="form-block">
+        <b style="float: left;">其他形象:</b><br/>
+        <div ng-repeat="form in monster.forms" style="float: left;">
+          <img ng-src="{{form.src}}">
+          <p style="text-align: center;">{{form.name}}</p>
+        </div>
+        <div style="clear: both;"></div>
+      </div>
+    </div>
+
+    <a href="#!/monster">返回列表</a>
+  </div>
+</body>
+</html>
